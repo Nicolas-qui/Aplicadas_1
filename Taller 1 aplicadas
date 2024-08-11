@@ -1,0 +1,660 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "collapsed_sections": [
+        "rakoaOEKuKXQ",
+        "XO_veptb6i1A",
+        "HaT3hdIEA7o_",
+        "IZ302TC2ymfz",
+        "i2V8tTaXSvGM",
+        "iHLWAAhFTRJP",
+        "xaAdLBpTTMvO",
+        "58MnNvqKoIYa",
+        "Mj9s0C_xpTku"
+      ],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Nicolas-qui/Aplicadas_1/blob/main/Taller%201%20aplicadas\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Pregunta 1.1\n",
+        "\n",
+        "|     Número     | Nombre |  Variable a despejar    | Ecuación Despejada |\n",
+        "|----------------|--------|-------------------------|-----------------|\n",
+        "|<center> 1 </center> |<center>Área lateral de un cilindro|<center> $r$|<center> $r=$ $\\frac{A}{2πg}$|\n",
+        "|<center> 2| <center>Volumen del cono| <center> $h$|<center> $h= \\frac{3v}{A_B}$\n",
+        "|<center> 3| <center>Volumen de la esfera|<center>$r$|<center>$r=\\sqrt[3]{\\frac{3V}{4π}}$|\n",
+        "|<center>4|<center>Área del trapecio|<center>$h$|<center>$h=\\frac{2A}{B+b}$\n",
+        "|<center>5|<center>Intensidad eléctrica|<center>t|<center>$t=\\frac{q}{I}$|\n",
+        "|<center>6|<center>Ley de Ohm|<center>$R$|<center>$R=\\frac{V}{I}$|\n",
+        "|<center>7|<center>Energía eléctrica|<center>$t$|<center>$t=\\frac{ER}{V^2}$|\n",
+        "|<center>8|<center>Resistencias en paralelo|<center>$R$|<center>$R= \\frac{1}{R_1}+\\frac{1}{R_2}$|\n",
+        "|<center>9|<center>Ecuación de gases perfectos|<center>$P_f$|<center> $P_f= \\frac{P_0V_0T_f}{T_0V_f}$|\n",
+        "|<center>10|<center>Intensidad eléctrica|<center>$V_B$|<center> $\n",
+        "=V_a-(I\\times R)$"
+      ],
+      "metadata": {
+        "id": "KEoUQnWInVSW"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Pregunta 1.2 - A\n",
+        "\n",
+        "$$[3×(−5 + 10 + (−5)) − 2×((−2) + (−4) + 10)]^2$$\n",
+        "<center>Se abren parentesis</center>\n",
+        "$$[3×(−5 + 10 −5) − 2×(−2 − 4 + 10)]^2$$\n",
+        "<center>Se realizan las operaciones</center>\n",
+        "$$[3×(0) − 2×(+ 4)]^2$$\n",
+        "<center>Se rompen parentesis y se realizan operaciones</center>\n",
+        "$$[0 − 8]^2$$\n",
+        "<center>Se realizan operaciones</center>\n",
+        "$$[64]$$"
+      ],
+      "metadata": {
+        "id": "rakoaOEKuKXQ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 55
+        },
+        "id": "4w8_L7UPltmj",
+        "outputId": "695b541a-3958-4205-a9a4-4e2b1bd5eb0c"
+      },
+      "outputs": [
+        {
+          "output_type": "display_data",
+          "data": {
+            "text/plain": [
+              "<IPython.core.display.Math object>"
+            ],
+            "text/latex": "$\\displaystyle [3×(−5 + 10 + (−5)) − 2×((−2) + (−4) + 10)]^2$"
+          },
+          "metadata": {}
+        },
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "El resultado es 64\n"
+          ]
+        }
+      ],
+      "source": [
+        "from IPython.display import display, Math\n",
+        "\n",
+        "display(Math(r'[3×(−5 + 10 + (−5)) − 2×((−2) + (−4) + 10)]^2'))\n",
+        "\n",
+        "\n",
+        "x = (3 * (-5 + 10 + (-5)) - 2 * ((-2) + (-4) + 10)) ** 2\n",
+        "\n",
+        "print(f\"El resultado es {x}\")\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Pregunta 1.2 - B\n",
+        "\n",
+        "$$45 + [3 × (2 + 8) -\\frac{8}{4}] + 10 − 8 3$$\n",
+        "<cente>Se resuelven los parentesis interiores y se rompen</center>\n",
+        "$$45 + [3 × 10 -\\frac{8}{4}] − 73$$\n",
+        "<cente>Se resuelven las ecuaciones dentro de los corchetes</center>\n",
+        "$$45 + [30 - 2] − 73$$\n",
+        "<cente>Se resuelven las ecuaciones dentro de los corchetes</center>\n",
+        "$$45 + [28] − 73$$\n",
+        "<cente>Se resuelven las ecuaciones </center>\n",
+        "$$0$$\n"
+      ],
+      "metadata": {
+        "id": "XO_veptb6i1A"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from IPython.display import display, Math\n",
+        "\n",
+        "display(Math(r'45 + [3 × (2 + 8) -\\frac{8}{4}] + 10 − 8 3'))\n",
+        "\n",
+        "x = 45 + (3 * (2 + 8) - 8 / 4) + 10 - 83\n",
+        "print(f\"La solucion es {x}\")"
+      ],
+      "metadata": {
+        "id": "HXEfsCjCvQ07",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 68
+        },
+        "outputId": "0b5d3623-08fb-45b7-b554-ce6251891001"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "display_data",
+          "data": {
+            "text/plain": [
+              "<IPython.core.display.Math object>"
+            ],
+            "text/latex": "$\\displaystyle 45 + [3 × (2 + 8) -\\frac{8}{4}] + 10 − 8 3$"
+          },
+          "metadata": {}
+        },
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "La solucion es 0.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Pregunta 1.2 - C\n",
+        "\n",
+        "$$[( −4 + 7)\\times 2 − 10]×(−4)–7 − 3$$\n",
+        "<cente>Resolver los parentesis</center>\n",
+        "$$[( +3 )\\times 2 − 10]×(−4)–10$$\n",
+        "<cente>Romper parentesis</center>\n",
+        "$$[6 − 10]×(−4)–10$$\n",
+        "<cente>Romper parentesis</center>\n",
+        "$$-4 ×(−4)–10$$\n",
+        "<cente>Resolver ecuaciones</center>\n",
+        "$$16–10$$\n",
+        "\n",
+        "$$6$$\n"
+      ],
+      "metadata": {
+        "id": "HaT3hdIEA7o_"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from IPython.display import display, Math\n",
+        "\n",
+        "display(Math(r'[( −4 + 7)\\times 2 − 10]×(−4)–7 − 3'))\n",
+        "\n",
+        "x = (( -4 + 7)*2 - 10)*(-4)-7 - 3\n",
+        "print(f\"La solucion es {x}\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 55
+        },
+        "id": "xWz8nyoHCvwq",
+        "outputId": "90e5b3fe-7040-4bd1-f66e-da0de1b80c9d"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "display_data",
+          "data": {
+            "text/plain": [
+              "<IPython.core.display.Math object>"
+            ],
+            "text/latex": "$\\displaystyle [( −4 + 7)\\times 2 − 10]×(−4)–7 − 3$"
+          },
+          "metadata": {}
+        },
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "6\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Pregunta 2.1\n",
+        "\n",
+        "Sea la función \\( f(x) \\) definida por:\n",
+        "\n",
+        "\n",
+        "\\begin{cases}\n",
+        "x + 2 & \\text{si } x < -3 \\\\\n",
+        "-x & \\text{si } -3 \\leq x \\leq 0 \\\\\n",
+        "2 & \\text{si } x \\geq 0\n",
+        "\\end{cases}\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "IZ302TC2ymfz"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from IPython.display import display, Math\n",
+        "\n",
+        "print(\" Dada la funcion: \" )\n",
+        "\n",
+        "while True:\n",
+        "    try:\n",
+        "     display(Math(r'\\begin{cases}  x + 2 & \\text{si } x < -3 \\\\ -x & \\text{si } -3 \\leq x \\leq 0 \\\\ 2 & \\text{si } x \\geq 0 \\end{cases}'))\n",
+        "     Numero = float(input(\"Digite un numero: \"))\n",
+        "\n",
+        "     if Numero <= 0 or Numero >= -3:\n",
+        "      print(f\"La respuesta es: {-Numero}\")\n",
+        "     elif Numero < -3:\n",
+        "      print(f\"La respuesta es: {Numero+2}\")\n",
+        "     elif Numero >= 0:\n",
+        "      print(f\"La respuesta es: 2\")\n",
+        "\n",
+        "     break\n",
+        "    except ValueError:\n",
+        "        print(\"Eso no es un número. Inténtalo de nuevo.\")\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 447
+        },
+        "id": "1CnCA999CyYA",
+        "outputId": "e1ff2e46-9efb-4c67-a494-c027657ce6d9"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            " Dada la funcion: \n"
+          ]
+        },
+        {
+          "output_type": "display_data",
+          "data": {
+            "text/plain": [
+              "<IPython.core.display.Math object>"
+            ],
+            "text/latex": "$\\displaystyle \\begin{cases}  x + 2 & \\text{si } x < -3 \\\\ -x & \\text{si } -3 \\leq x \\leq 0 \\\\ 2 & \\text{si } x \\geq 0 \\end{cases}$"
+          },
+          "metadata": {}
+        },
+        {
+          "output_type": "error",
+          "ename": "KeyboardInterrupt",
+          "evalue": "Interrupted by user",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mKeyboardInterrupt\u001b[0m                         Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-2-932a08089861>\u001b[0m in \u001b[0;36m<cell line: 5>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      6\u001b[0m     \u001b[0;32mtry\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      7\u001b[0m      \u001b[0mdisplay\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mMath\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34mr'\\begin{cases}  x + 2 & \\text{si } x < -3 \\\\ -x & \\text{si } -3 \\leq x \\leq 0 \\\\ 2 & \\text{si } x \\geq 0 \\end{cases}'\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 8\u001b[0;31m      \u001b[0mNumero\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mfloat\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0minput\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Digite un numero: \"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      9\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     10\u001b[0m      \u001b[0;32mif\u001b[0m \u001b[0mNumero\u001b[0m \u001b[0;34m<=\u001b[0m \u001b[0;36m0\u001b[0m \u001b[0;32mor\u001b[0m \u001b[0mNumero\u001b[0m \u001b[0;34m>=\u001b[0m \u001b[0;34m-\u001b[0m\u001b[0;36m3\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.10/dist-packages/ipykernel/kernelbase.py\u001b[0m in \u001b[0;36mraw_input\u001b[0;34m(self, prompt)\u001b[0m\n\u001b[1;32m    849\u001b[0m                 \u001b[0;34m\"raw_input was called, but this frontend does not support input requests.\"\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    850\u001b[0m             )\n\u001b[0;32m--> 851\u001b[0;31m         return self._input_request(str(prompt),\n\u001b[0m\u001b[1;32m    852\u001b[0m             \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_parent_ident\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    853\u001b[0m             \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_parent_header\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.10/dist-packages/ipykernel/kernelbase.py\u001b[0m in \u001b[0;36m_input_request\u001b[0;34m(self, prompt, ident, parent, password)\u001b[0m\n\u001b[1;32m    893\u001b[0m             \u001b[0;32mexcept\u001b[0m \u001b[0mKeyboardInterrupt\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    894\u001b[0m                 \u001b[0;31m# re-raise KeyboardInterrupt, to truncate traceback\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 895\u001b[0;31m                 \u001b[0;32mraise\u001b[0m \u001b[0mKeyboardInterrupt\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Interrupted by user\"\u001b[0m\u001b[0;34m)\u001b[0m \u001b[0;32mfrom\u001b[0m \u001b[0;32mNone\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    896\u001b[0m             \u001b[0;32mexcept\u001b[0m \u001b[0mException\u001b[0m \u001b[0;32mas\u001b[0m \u001b[0me\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    897\u001b[0m                 \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mlog\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mwarning\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Invalid Message:\"\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mexc_info\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;32mTrue\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mKeyboardInterrupt\u001b[0m: Interrupted by user"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Pregunta 2.2\n",
+        "\n",
+        "Sea la función \\( f(x) \\) definida por:\n",
+        "\n",
+        "\n",
+        "\\begin{cases}  a - x^2 & \\text{si } x < 0 \\\\\n",
+        " 2 & \\text{si } 0 \\leq x \\leq 1 \\\\\n",
+        "  x^2 -2x +b & \\text{si } x>1  \\end{cases}"
+      ],
+      "metadata": {
+        "id": "i2V8tTaXSvGM"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from IPython.display import display, Math\n",
+        "\n",
+        "print(\" Dada la funcion: \" )\n",
+        "\n",
+        "while True:\n",
+        "    try:\n",
+        "\n",
+        "\n",
+        "      display(Math(r'\\begin{cases}  a - x^2 & \\text{si } x < 0 \\\\ 2 & \\text{si } 0 \\leq x \\leq 1 \\\\ x^2 -2x +b & \\text{si } x>1  \\end{cases}'))\n",
+        "\n",
+        "      a= float(input(\"Ingresar el valor de a \"))\n",
+        "      b= float(input(\"Ingresar el valor de b \"))\n",
+        "      x= float(input(\"Ingresar el vlaor de x \"))\n",
+        "\n",
+        "      def función_a_trozos(x,a,b):\n",
+        "        if x < 0:\n",
+        "            return a - x**2\n",
+        "        elif 0 <= x <= 1:\n",
+        "            return 2\n",
+        "        else: # x > 1\n",
+        "            return (x**2) - (2*x) + b\n",
+        "\n",
+        "\n",
+        "\n",
+        "      resultado = función_a_trozos(x,a,b)\n",
+        "\n",
+        "      print(f\"El resultado de la función a trozos para x = {x} es: {resultado}\")\n",
+        "      break\n",
+        "    except ValueError:\n",
+        "        print(\"Eso no es un número. Inténtalo de nuevo.\")\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 177
+        },
+        "id": "1SNG7nzmxHnT",
+        "outputId": "7f208547-dfa4-4e4b-c615-517bf935d32f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            " Dada la funcion: \n"
+          ]
+        },
+        {
+          "output_type": "display_data",
+          "data": {
+            "text/plain": [
+              "<IPython.core.display.Math object>"
+            ],
+            "text/latex": "$\\displaystyle \\begin{cases}  a - x^2 & \\text{si } x < 0 \\\\ 2 & \\text{si } 0 \\leq x \\leq 1 \\\\ x^2 -2x +b & \\text{si } x>1  \\end{cases}$"
+          },
+          "metadata": {}
+        },
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Ingresar el valor de a 2\n",
+            "Ingresar el valor de b 3\n",
+            "Ingresar el vlaor de x -10\n",
+            "El resultado de la función a trozos para x = -10.0 es: -98.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Pregunta 3.1"
+      ],
+      "metadata": {
+        "id": "iHLWAAhFTRJP"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "\n",
+        "def calcular(lista):\n",
+        "    cuadrados = []\n",
+        "    cubos = []\n",
+        "    raices = []\n",
+        "\n",
+        "\n",
+        "\n",
+        "    for numero in lista:\n",
+        "        cuadrados.append(numero ** 2)\n",
+        "        cubos.append(numero ** 3)\n",
+        "        raices.append((numero)**0.5)\n",
+        "\n",
+        "\n",
+        "    return cuadrados, cubos, raices\n",
+        "while True:\n",
+        "    try:\n",
+        "        n = int(input(\"¿Cuántos números quieres ingresar ? \"))\n",
+        "        break\n",
+        "    except ValueError:\n",
+        "        print(\"Eso no es un número. Inténtalo de nuevo.\")\n",
+        "\n",
+        "valores = []\n",
+        "\n",
+        "while True:\n",
+        "    try:\n",
+        "        for i in range(n):\n",
+        "            numero = float(input(f\"Ingresa el número {i+1}: \"))\n",
+        "            valores.append(numero)\n",
+        "\n",
+        "        break\n",
+        "    except ValueError:\n",
+        "        print(\"Eso no es un número. Inténtalo de nuevo.\")\n",
+        "\n",
+        "\n",
+        "cuadrados, cubos, raices  = calcular(valores)\n",
+        "\n",
+        "\n",
+        "\n",
+        "print(f\"Números originales: {valores}\")\n",
+        "print(f\"Cuadrados: {cuadrados}\")\n",
+        "print(f\"Cubos: {cubos}\")\n",
+        "print(f\"Raíces cuadradas: {raices}\")\n"
+      ],
+      "metadata": {
+        "id": "sYis8DvSfZ7-",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "dc0b2623-c350-4bd1-8901-46161ace9708"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "¿Cuántos números quieres ingresar ? 3\n",
+            "Ingresa el número 1: 4\n",
+            "Ingresa el número 2: 5\n",
+            "Ingresa el número 3: 6\n",
+            "Números originales: [4.0, 5.0, 6.0]\n",
+            "Cuadrados: [16.0, 25.0, 36.0]\n",
+            "Cubos: [64.0, 125.0, 216.0]\n",
+            "Raíces cuadradas: [2.0, 2.23606797749979, 2.449489742783178]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Pregunta 3.2\n"
+      ],
+      "metadata": {
+        "id": "xaAdLBpTTMvO"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "while True:\n",
+        "    try:\n",
+        "        n = int(input(\"¿Cuántas materias viste el semestre pasado? ? \"))\n",
+        "        break\n",
+        "    except ValueError:\n",
+        "        print(\"Eso no es un número. Inténtalo de nuevo.\")\n",
+        "\n",
+        "todo = []\n",
+        "while True:\n",
+        "    try:\n",
+        "        for i in range(n):\n",
+        "            materia = str(input(f\"Ingresa la materia numero {i+1}: \"))\n",
+        "\n",
+        "\n",
+        "            nota = float(input(f\"Que nota sacaste en la materia numero {i+1}: \"))\n",
+        "\n",
+        "\n",
+        "            if nota >= 4:\n",
+        "                mensaje = \"Nivel superior\"\n",
+        "            elif 3.5 <= nota < 4:\n",
+        "                mensaje = \"Asignatura aprobada, pero debe asistir a plan de mejoramiento, diríjase a CAMBAS.\"\n",
+        "            else:\n",
+        "                mensaje = \"Asignatura No aprobada debe repetirla el próximo semestre.\"\n",
+        "\n",
+        "            todo.append((materia, nota, mensaje))\n",
+        "        break\n",
+        "    except ValueError:\n",
+        "        print(\"Valor invalido.\")\n",
+        "\n",
+        "for materia, nota, mensaje in todo:\n",
+        "    print(f\"Asignatura: {materia} - Nota: {nota} - {mensaje}\")\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "TPviT39l1IXh"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Pregunta 3.3\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "58MnNvqKoIYa"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "precio_petroleo = [80.65,80.79,78.85,75.03,75.34,76.65,77.84]\n",
+        "\n",
+        "print(\"Precios del barril de petroleo los últimos 7 días: \")\n",
+        "for int, precio in enumerate(precio_petroleo, start=1):\n",
+        "    print(f\"Día {int}: ${precio:.2f}\")\n",
+        "\n",
+        "precio_cocacola = [136.74,136.74,136.74,136.74,136.74,136.74,136.74]\n",
+        "\n",
+        "print(\"Precios del barril de cocacola los últimos 7 días: \")\n",
+        "for int, precio in enumerate(precio_cocacola, start=1):\n",
+        "    print(f\"Día {int}: ${precio:.2f}\")\n",
+        "\n",
+        "proporciones = []\n",
+        "\n",
+        "for precio_petroleo, precio_cocacola in zip(precio_petroleo, precio_cocacola):\n",
+        "    if precio_petroleo != 0:\n",
+        "        proporcion = precio_cocacola / precio_petroleo\n",
+        "        proporciones.append(proporcion)\n",
+        "    else:\n",
+        "        proporciones.append(None)\n",
+        "\n",
+        "    print(\"La proporción entre el precio del barril de cocacola y el barril de petroleo es:\")\n",
+        "    for int, proporcion in enumerate(proporciones):\n",
+        "        print(f\"Día {int+1}: {proporcion:.2f}\")"
+      ],
+      "metadata": {
+        "id": "-mN5uryOpHEw"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Pregunta 3.4"
+      ],
+      "metadata": {
+        "id": "Mj9s0C_xpTku"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dinero_ahorrado_por_año = [60,180,300,420,540,660,780,900,1020,1140,1260,1380,1500,1620,1740]\n",
+        "\n",
+        "print(\"El dinero ahorrado por una pareja durante 15 años, aumentando 10$ por cada año que pasa: \")\n",
+        "for int, dinero in enumerate(dinero_ahorrado_por_año, start=1):\n",
+        "    print(f\"Año {int}: ${dinero: .2f}\")\n",
+        "\n",
+        "suma_total = sum(dinero_ahorrado_por_año)\n",
+        "print(\"El dinero ahorrado en total por la pareja es: \", suma_total)"
+      ],
+      "metadata": {
+        "id": "8eVuOFWJpXDL",
+        "outputId": "e34ae70b-af1c-49ab-daad-5f3366b32b5d",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "El dinero ahorrado por una pareja durante 15 años, aumentando 10$ por cada año que pasa: \n",
+            "Año 1: $ 60.00\n",
+            "Año 2: $ 180.00\n",
+            "Año 3: $ 300.00\n",
+            "Año 4: $ 420.00\n",
+            "Año 5: $ 540.00\n",
+            "Año 6: $ 660.00\n",
+            "Año 7: $ 780.00\n",
+            "Año 8: $ 900.00\n",
+            "Año 9: $ 1020.00\n",
+            "Año 10: $ 1140.00\n",
+            "Año 11: $ 1260.00\n",
+            "Año 12: $ 1380.00\n",
+            "Año 13: $ 1500.00\n",
+            "Año 14: $ 1620.00\n",
+            "Año 15: $ 1740.00\n",
+            "El dinero ahorrado en total por la pareja es:  13500\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
